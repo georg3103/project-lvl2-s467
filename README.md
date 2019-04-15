@@ -6,5 +6,14 @@
 
 [![Build Status](https://travis-ci.org/georg3103/project-lvl2-s467.svg?branch=master)](https://travis-ci.org/georg3103/project-lvl2-s467)
 
-# gendiff
+## gendiff
+
+Utiluty for searching diff in config files
+
+## Setup
+
+```sh
+$ make install
+```
+
 

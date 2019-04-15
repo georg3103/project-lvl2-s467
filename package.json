@@ -37,6 +37,6 @@
     "eslint-plugin-import": "^2.17.1"
   },
   "dependencies": {
-    "readline-sync": "^1.4.9"
+    "commander": "^2.20.0"
   }
 }
