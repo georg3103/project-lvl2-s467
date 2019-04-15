@@ -1,6 +1,6 @@
 {
   "name": "pr-lvl2-s467-app",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Utilty for searching differences in configuration files",
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",

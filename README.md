@@ -10,6 +10,10 @@
 
 Utiluty for searching diff in config files
 
+## Install
+
+<a href="https://asciinema.org/a/IMSmpw6m67FOjooL13YcR42xF" target="_blank"><img src="https://asciinema.org/a/IMSmpw6m67FOjooL13YcR42xF.svg" /></a>
+
 ## Setup
 
 ```sh
