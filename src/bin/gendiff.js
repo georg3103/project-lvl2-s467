@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 import commander from 'commander';
 import { version } from '../../package.json';
+import genDiff from '..';
 
-const program = commander;
-
-program
+commander
   .version(version)
-  .arguments('<firstConfig> <secondConfig>')
   .description('Compares two configuration files and shows a difference.')
-  .option('-f, --format [type]', 'Output format')
-  .action((firstConfig, secondConfig) => console.log(secondConfig))
-  .parse(process.argv);
+  .option('-f, --format [type]', 'Output format', 'tree')
+  .arguments('<file1> <file2>')
+  .action((file1, file2) => console.log(
+    genDiff(file1, file2),
+  ));
 
-console.log('works fine!');
+commander.parse(process.argv);
