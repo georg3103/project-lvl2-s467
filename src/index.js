@@ -1,6 +1,5 @@
-import fs from 'fs';
-import path from 'path';
 import _ from 'lodash';
+import parser from './parser';
 
 function getObjectsDiff(obj1, obj2) {
   const obj1Keys = Object.keys(obj1);
@@ -23,8 +22,8 @@ function getObjectsDiff(obj1, obj2) {
 }
 
 export default (file1path, file2path) => {
-  const file1 = JSON.parse(fs.readFileSync(path.normalize(file1path), 'utf8'));
-  const file2 = JSON.parse(fs.readFileSync(path.normalize(file2path), 'utf8'));
+  const file1 = parser(file1path);
+  const file2 = parser(file2path);
 
   return getObjectsDiff(file1, file2);
 };

@@ -7,6 +7,9 @@ start:
 test:
 	npm run test
 
+coveralls:
+	npm run coveralls
+
 publish:
 	npm publish
 
