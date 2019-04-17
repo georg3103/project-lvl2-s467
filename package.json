@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/georg3103/project-lvl2-s467#readme",
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "collectCoverage": true
   },
   "keywords": [
     "gendiff"
