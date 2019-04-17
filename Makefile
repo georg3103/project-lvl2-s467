@@ -5,10 +5,7 @@ start:
 	npx babel-node -- src/bin/gendiff.js
 
 test:
-	npm run test
-
-coveralls:
-	npm run coveralls
+	npm test
 
 publish:
 	npm publish
