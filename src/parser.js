@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import yml from 'js-yaml';
+import ini from 'ini';
 
 export default (filePath) => {
   const file = fs.readFileSync(path.normalize(filePath), 'utf8');
@@ -13,6 +14,9 @@ export default (filePath) => {
       break;
     case '.yml':
       fileObj = yml.load(file);
+      break;
+    case '.ini':
+      fileObj = ini.parse(file);
       break;
     default:
       throw new Error('Invalid file format');
