@@ -19,6 +19,7 @@ export default (filePath) => {
       fileObj = ini.parse(file);
       break;
     default:
+      console.log(file);
       throw new Error('Invalid file format');
   }
   return fileObj;
