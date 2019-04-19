@@ -14,6 +14,14 @@ Utiluty for searching diff in config files
 
 <a href="https://asciinema.org/a/IMSmpw6m67FOjooL13YcR42xF" target="_blank"><img src="https://asciinema.org/a/IMSmpw6m67FOjooL13YcR42xF.svg" /></a>
 
+## gendiff work on flat data
+
+<a href="https://asciinema.org/a/yTBTv7Fff0U4jmXR9qz4bBwuF" target="_blank"><img src="https://asciinema.org/a/IMSmpw6m67FOjooL13YcR42xF.svg" /></a>
+
+## gendiff work on deep data
+
+<a href="https://asciinema.org/a/P3ZAwfBQWiv2DiGWLx9Xsowcf" target="_blank"><img src="https://asciinema.org/a/IMSmpw6m67FOjooL13YcR42xF.svg" /></a>
+
 ## Setup
 
 ```sh
