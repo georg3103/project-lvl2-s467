@@ -10,7 +10,16 @@ const makeString = (value, level) => {
   return `{\n${valueKeys.join('\n')}\n${addIndentation(level + 1)}}`;
 };
 
+const formatValue = (value) => {
+  // not object
+  if (!(value instanceof Object)) return value;
+  // object
+  // Property 'group2' was added with value: [complex value]
+  return '[complex value]';
+};
+
 export {
   addIndentation,
   makeString,
+  formatValue,
 };
