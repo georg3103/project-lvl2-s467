@@ -1,12 +1,14 @@
+import fs from 'fs';
 import buildAst from './buildAst';
-import parser from './parser';
-import render from './render/render';
+import parse from './parser';
+import render from './render';
 
 export default (file1path, file2path, format = 'tree') => {
-  const file1 = parser(file1path);
-  const file2 = parser(file2path);
-  const parserFn = render(format);
-  const ast = buildAst(file1, file2);
+  const file1content = parse(file1path)(fs.readFileSync(file1path, 'utf-8'));
+  const file2content = parse(file2path)(fs.readFileSync(file2path, 'utf-8'));
 
-  return parserFn(ast);
+  const renderAst = render(format);
+  const ast = buildAst(file1content, file2content);
+
+  return renderAst(ast);
 };

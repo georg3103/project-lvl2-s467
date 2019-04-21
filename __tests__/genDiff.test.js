@@ -1,24 +1,24 @@
 import fs from 'fs';
-import genDiff from '..';
+import genDiff from '../src/index';
 
 // test json format tree
-const file1pathJson = 'src/__tests__/__fixtures__/before.json';
-const file2pathJson = 'src/__tests__/__fixtures__/after.json';
-const file1pathComplexJson = 'src/__tests__/__fixtures__/beforeComplex.json';
-const file2pathComplexJson = 'src/__tests__/__fixtures__/afterComplex.json';
+const file1pathJson = '__tests__/__fixtures__/before.json';
+const file2pathJson = '__tests__/__fixtures__/after.json';
+const file1pathComplexJson = '__tests__/__fixtures__/beforeComplex.json';
+const file2pathComplexJson = '__tests__/__fixtures__/afterComplex.json';
 
 // test yml format
-const file1pathYml = 'src/__tests__/__fixtures__/before.yml';
-const file2pathYml = 'src/__tests__/__fixtures__/after.yml';
+const file1pathYml = '__tests__/__fixtures__/before.yml';
+const file2pathYml = '__tests__/__fixtures__/after.yml';
 // test ini format
-const file1pathIni = 'src/__tests__/__fixtures__/before.ini';
-const file2pathIni = 'src/__tests__/__fixtures__/after.ini';
+const file1pathIni = '__tests__/__fixtures__/before.ini';
+const file2pathIni = '__tests__/__fixtures__/after.ini';
 
 // expected output (tree object)
-const expectedTree = fs.readFileSync('src/__tests__/__fixtures__/expectedTree.txt', 'utf-8');
-const expectedDeepTree = fs.readFileSync('src/__tests__/__fixtures__/expectedDeepTree.txt', 'utf-8');
-const expectedDeepPlain = fs.readFileSync('src/__tests__/__fixtures__/expectedDeepPlain.txt', 'utf-8');
-const expectedDeepJson = fs.readFileSync('src/__tests__/__fixtures__/expectedDeepJson.json', 'utf-8');
+const expectedTree = fs.readFileSync('__tests__/__fixtures__/expectedTree.txt', 'utf-8');
+const expectedDeepTree = fs.readFileSync('__tests__/__fixtures__/expectedDeepTree.txt', 'utf-8');
+const expectedDeepPlain = fs.readFileSync('__tests__/__fixtures__/expectedDeepPlain.txt', 'utf-8');
+const expectedDeepJson = fs.readFileSync('__tests__/__fixtures__/expectedDeepJson.json', 'utf-8');
 
 /* eslint-disable */
 describe('genDiff tree', () => {

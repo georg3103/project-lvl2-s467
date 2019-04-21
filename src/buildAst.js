@@ -12,14 +12,14 @@ const buildAst = (obj1, obj2) => {
       return {
         key,
         value2,
-        type: 'plus',
+        type: 'add',
       };
     }
     if (_.has(obj1, key) && !_.has(obj2, key)) {
       return {
         key,
         value1,
-        type: 'minus',
+        type: 'removed',
       };
     }
     if (obj1[key] === obj2[key]) {
@@ -32,7 +32,7 @@ const buildAst = (obj1, obj2) => {
     if (_.isPlainObject(obj1[key]) && _.isPlainObject(obj2[key])) {
       return {
         key,
-        type: 'obj',
+        type: 'nested',
         children: buildAst(obj1[key], obj2[key]),
       };
     }

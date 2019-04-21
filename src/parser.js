@@ -1,26 +1,20 @@
-import fs from 'fs';
 import path from 'path';
 import yml from 'js-yaml';
 import ini from 'ini';
 
-export default (filePath) => {
-  const file = fs.readFileSync(path.normalize(filePath), 'utf8');
-  const fileFormat = path.extname(filePath);
+const parsers = {
+  '.json': JSON.parse,
+  '.yml': yml.load,
+  '.ini': ini.parse,
+};
 
-  let fileObj;
-  switch (fileFormat) {
-    case '.json':
-      fileObj = JSON.parse(file);
-      break;
-    case '.yml':
-      fileObj = yml.load(file);
-      break;
-    case '.ini':
-      fileObj = ini.parse(file);
-      break;
-    default:
-      console.log(file);
-      throw new Error('Invalid file format');
-  }
-  return fileObj;
+export default (filePath) => {
+  const fileFormat = path.extname(filePath);
+  const parse = parsers[fileFormat];
+
+  console.log(fileFormat, parse);
+
+  if (!parse) throw new Error('not valid file format');
+
+  return parse;
 };

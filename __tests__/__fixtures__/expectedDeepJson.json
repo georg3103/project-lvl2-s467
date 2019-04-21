@@ -1,0 +1,57 @@
+{
+  "key": "common",
+  "type": "nested",
+  "children": [
+    {
+      "key": "setting1",
+      "value1": "Value 1",
+      "type": "same"
+    },
+    {
+      "key": "setting2",
+      "value1": "200",
+      "type": "removed"
+    },
+    {
+      "key": "setting3",
+      "value1": true,
+      "value2": {
+        "key": "value"
+      },
+      "type": "edited"
+    },
+    {
+      "key": "setting6",
+      "type": "nested",
+      "children": [
+        {
+          "key": "key",
+          "value1": "value",
+          "type": "same"
+        },
+        {
+          "key": "ops",
+          "value2": "vops",
+          "type": "add"
+        }
+      ]
+    },
+    {
+      "key": "follow",
+      "value2": false,
+      "type": "add"
+    },
+    {
+      "key": "setting4",
+      "value2": "blah blah",
+      "type": "add"
+    },
+    {
+      "key": "setting5",
+      "value2": {
+        "key5": "value5"
+      },
+      "type": "add"
+    }
+  ]
+}

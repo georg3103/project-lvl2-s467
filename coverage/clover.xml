@@ -1,89 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1555710694211" clover="3.2.0">
-  <project timestamp="1555710694211" name="All files">
-    <metrics statements="60" coveredstatements="57" conditionals="24" coveredconditionals="21" methods="16" coveredmethods="16" elements="100" coveredelements="94" complexity="0" loc="60" ncloc="60" packages="2" files="6" classes="6"/>
+<coverage generated="1555843208979" clover="3.2.0">
+  <project timestamp="1555843208979" name="All files">
+    <metrics statements="65" coveredstatements="63" conditionals="34" coveredconditionals="31" methods="17" coveredmethods="17" elements="116" coveredelements="111" complexity="0" loc="65" ncloc="65" packages="2" files="7" classes="7"/>
     <package name="src">
-      <metrics statements="13" coveredstatements="13" conditionals="5" coveredconditionals="5" methods="5" coveredmethods="5"/>
+      <metrics statements="27" coveredstatements="27" conditionals="17" coveredconditionals="16" methods="4" coveredmethods="4"/>
+      <file name="buildAst.js" path="/Users/georgijmkrtcan/hexlet2/project-lvl2-s467/src/buildAst.js">
+        <metrics statements="16" coveredstatements="16" conditionals="14" coveredconditionals="14" methods="2" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="15" type="stmt"/>
+        <line num="5" count="15" type="stmt"/>
+        <line num="6" count="15" type="stmt"/>
+        <line num="8" count="15" type="stmt"/>
+        <line num="9" count="63" type="stmt"/>
+        <line num="10" count="63" type="stmt"/>
+        <line num="11" count="63" type="cond" truecount="4" falsecount="0"/>
+        <line num="12" count="18" type="stmt"/>
+        <line num="18" count="45" type="cond" truecount="4" falsecount="0"/>
+        <line num="19" count="12" type="stmt"/>
+        <line num="25" count="33" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="12" type="stmt"/>
+        <line num="32" count="21" type="cond" truecount="4" falsecount="0"/>
+        <line num="33" count="9" type="stmt"/>
+        <line num="39" count="12" type="stmt"/>
+      </file>
       <file name="index.js" path="/Users/georgijmkrtcan/hexlet2/project-lvl2-s467/src/index.js">
         <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="6" count="6" type="stmt"/>
         <line num="7" count="6" type="stmt"/>
         <line num="8" count="6" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
         <line num="11" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
       </file>
-      <file name="utils.js" path="/Users/georgijmkrtcan/hexlet2/project-lvl2-s467/src/utils.js">
-        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
-        <line num="3" count="50" type="stmt"/>
+      <file name="parser.js" path="/Users/georgijmkrtcan/hexlet2/project-lvl2-s467/src/parser.js">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
-        <line num="7" count="34" type="cond" truecount="2" falsecount="0"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="10" count="5" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="15" count="32" type="cond" truecount="2" falsecount="0"/>
-        <line num="18" count="5" type="stmt"/>
+        <line num="12" count="12" type="stmt"/>
+        <line num="13" count="12" type="stmt"/>
+        <line num="15" count="12" type="stmt"/>
+        <line num="17" count="12" type="cond" truecount="1" falsecount="1"/>
+        <line num="19" count="12" type="stmt"/>
       </file>
     </package>
     <package name="src.render">
-      <metrics statements="47" coveredstatements="44" conditionals="19" coveredconditionals="16" methods="11" coveredmethods="11"/>
-      <file name="render.js" path="/Users/georgijmkrtcan/hexlet2/project-lvl2-s467/src/render/render.js">
+      <metrics statements="38" coveredstatements="36" conditionals="17" coveredconditionals="15" methods="13" coveredmethods="13"/>
+      <file name="index.js" path="/Users/georgijmkrtcan/hexlet2/project-lvl2-s467/src/render/index.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="5" count="1" type="stmt"/>
         <line num="11" count="6" type="stmt"/>
       </file>
       <file name="renderJson.js" path="/Users/georgijmkrtcan/hexlet2/project-lvl2-s467/src/render/renderJson.js">
-        <metrics statements="19" coveredstatements="18" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="3"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="3" count="4" type="stmt"/>
-        <line num="6" count="16" type="stmt"/>
-        <line num="7" count="16" type="cond" truecount="5" falsecount="1"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="14" count="5" type="stmt"/>
-        <line num="17" count="5" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="22" count="2" type="stmt"/>
-        <line num="24" count="3" type="stmt"/>
-        <line num="28" count="3" type="stmt"/>
-        <line num="30" count="3" type="stmt"/>
-        <line num="31" count="3" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="35" count="16" type="stmt"/>
-        <line num="37" count="4" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
       </file>
       <file name="renderPlain.js" path="/Users/georgijmkrtcan/hexlet2/project-lvl2-s467/src/render/renderPlain.js">
-        <metrics statements="14" coveredstatements="13" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="3"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="4" type="stmt"/>
-        <line num="20" count="16" type="stmt"/>
-        <line num="21" count="16" type="stmt"/>
-        <line num="22" count="16" type="stmt"/>
-        <line num="23" count="16" type="cond" truecount="5" falsecount="1"/>
+        <metrics statements="17" coveredstatements="16" conditionals="8" coveredconditionals="7" methods="4" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="32" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="14" count="16" type="stmt"/>
+        <line num="15" count="16" type="stmt"/>
+        <line num="16" count="16" type="stmt"/>
+        <line num="17" count="16" type="cond" truecount="5" falsecount="1"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
         <line num="25" count="3" type="stmt"/>
-        <line num="27" count="5" type="stmt"/>
-        <line num="29" count="2" type="stmt"/>
-        <line num="31" count="3" type="stmt"/>
-        <line num="33" count="3" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="38" count="4" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
       </file>
       <file name="renderTree.js" path="/Users/georgijmkrtcan/hexlet2/project-lvl2-s467/src/render/renderTree.js">
-        <metrics statements="12" coveredstatements="11" conditionals="7" coveredconditionals="6" methods="3" coveredmethods="3"/>
-        <line num="5" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="6" count="7" type="stmt"/>
-        <line num="9" count="31" type="stmt"/>
-        <line num="10" count="31" type="cond" truecount="5" falsecount="1"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="14" count="8" type="stmt"/>
-        <line num="16" count="8" type="stmt"/>
-        <line num="18" count="6" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="28" count="7" type="stmt"/>
-        <line num="30" count="4" type="stmt"/>
+        <metrics statements="17" coveredstatements="16" conditionals="9" coveredconditionals="8" methods="6" coveredmethods="6"/>
+        <line num="3" count="50" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="34" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="14" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="18" count="31" type="stmt"/>
+        <line num="19" count="31" type="cond" truecount="5" falsecount="1"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="23" count="8" type="stmt"/>
+        <line num="25" count="8" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="7" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
       </file>
     </package>
   </project>
