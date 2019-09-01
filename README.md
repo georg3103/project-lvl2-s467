@@ -8,7 +8,7 @@
 
 ## gendiff
 
-Utiluty for searching diff in config files
+Utiluty for searching diff in config files 
 
 ## Install
 
