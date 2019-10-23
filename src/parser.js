@@ -12,8 +12,6 @@ export default (filePath) => {
   const fileFormat = path.extname(filePath);
   const parse = parsers[fileFormat];
 
-  console.log(fileFormat, parse);
-
   if (!parse) throw new Error('not valid file format');
 
   return parse;

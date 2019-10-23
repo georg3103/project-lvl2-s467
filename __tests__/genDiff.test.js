@@ -1,62 +1,33 @@
 import fs from 'fs';
 import genDiff from '../src/index';
 
-// test json format tree
-const file1pathJson = '__tests__/__fixtures__/before.json';
-const file2pathJson = '__tests__/__fixtures__/after.json';
-const file1pathComplexJson = '__tests__/__fixtures__/beforeComplex.json';
-const file2pathComplexJson = '__tests__/__fixtures__/afterComplex.json';
+const fileFormats = ['.json', '.yml', '.ini'];
 
-// test yml format
-const file1pathYml = '__tests__/__fixtures__/before.yml';
-const file2pathYml = '__tests__/__fixtures__/after.yml';
-// test ini format
-const file1pathIni = '__tests__/__fixtures__/before.ini';
-const file2pathIni = '__tests__/__fixtures__/after.ini';
+const testDefaultFormat = (ext, type) => {
+  it(`gendiff ${type} ${ext}`, () => {
+    const before = `__tests__/__fixtures__/before_${type}${ext}`;
+    const after = `__tests__/__fixtures__/after_${type}${ext}`;
+    const expectedFilePath = `__tests__/__fixtures__/expected_${type}.txt`;
+    const actual = genDiff(before, after);
+    const expected = fs.readFileSync(expectedFilePath, 'utf-8');
+    expect(actual).toBe(expected);
+  });
+};
 
-// expected output (tree object)
-const expectedTree = fs.readFileSync('__tests__/__fixtures__/expectedTree.txt', 'utf-8');
-const expectedDeepTree = fs.readFileSync('__tests__/__fixtures__/expectedDeepTree.txt', 'utf-8');
-const expectedDeepPlain = fs.readFileSync('__tests__/__fixtures__/expectedDeepPlain.txt', 'utf-8');
-const expectedDeepJson = fs.readFileSync('__tests__/__fixtures__/expectedDeepJson.json', 'utf-8');
+const testCustomFormat = (type) => {
+  it(`gendiff ${type}`, () => {
+    const before = '__tests__/__fixtures__/before_nested.json';
+    const after = '__tests__/__fixtures__/after_nested.json';
+    const expectedFilePath = `__tests__/__fixtures__/expected_${type}.txt`;
+    const expectedFile = fs.readFileSync(expectedFilePath, 'utf-8');
+    const actual = genDiff(before, after, type);
+    expect(actual).toBe(expectedFile);
+  });
+};
 
-/* eslint-disable */
-describe('genDiff tree', () => {
-  test.each([
-    [file1pathJson, file2pathJson],
-    [file1pathYml, file2pathYml],
-    [file1pathIni, file2pathIni]
-  ])('genDiff (json, yml, ini)',
-    (file1, file2) => {
-      expect(genDiff(file1, file2)).toBe(expectedTree);
-    })
-  test.each([
-    [file1pathComplexJson, file2pathComplexJson],
-  ])('genDiff of a deep tree (json, yml, ini)',
-  (file1, file2) => {
-    expect(genDiff(file1, file2)).toBe(expectedDeepTree);
-  })
-});
-
-
-
-describe('genDiff plain', () => {
-  test.each([
-    [file1pathComplexJson, file2pathComplexJson],
-  ])('genDiff of a deep plain (json, yml, ini)',
-  (file1, file2) => {
-    expect(genDiff(file1, file2, 'plain')).toBe(expectedDeepPlain);
-  },
-)
-});
-
-describe('genDiff json', () => {
-  test.each([
-    [file1pathComplexJson, file2pathComplexJson],
-  ])('genDiff of a deep json (json, yml, ini)',
-  (file1, file2) => {
-    // const genDiffJson = JSON.parse((genDiff(file1, file2, 'json')))
-    expect(genDiff(file1, file2, 'json')).toBe(expectedDeepJson);
-  },
-)
+describe('gendiff', () => {
+  fileFormats.forEach(ext => testDefaultFormat(ext, 'flat'));
+  fileFormats.forEach(ext => testDefaultFormat(ext, 'nested'));
+  testCustomFormat('plain');
+  testCustomFormat('json');
 });
