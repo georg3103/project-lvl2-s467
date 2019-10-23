@@ -1,10 +1,9 @@
 import renderTree from './renderTree';
-import renderJson from './renderJson';
 import renderPlain from './renderPlain';
 
 const parserObj = {
   tree: renderTree,
-  json: renderJson,
+  json: ([ast]) => JSON.stringify(ast, null, 2),
   plain: renderPlain,
 };
 
