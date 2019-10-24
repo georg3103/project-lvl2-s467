@@ -1,8 +1,5 @@
 const formatValue = (value) => {
-  // not object
   if (!(value instanceof Object)) return value;
-  // object
-  // Property 'group2' was added with value: [complex value]
   return '[complex value]';
 };
 
