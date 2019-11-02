@@ -12,7 +12,7 @@ const buildAst = (obj1, obj2) => {
       return {
         key,
         value2,
-        type: 'add',
+        type: 'added',
       };
     }
     if (_.has(obj1, key) && !_.has(obj2, key)) {

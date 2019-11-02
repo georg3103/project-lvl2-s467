@@ -10,7 +10,7 @@ const formatValue = (value, level) => {
 
 const mapping = {
   same: ({ key, value1, level }) => `${addIndentation(level)}    ${key}: ${formatValue(value1, level)}`,
-  add: ({ key, value2, level }) => `${addIndentation(level)}  + ${key}: ${formatValue(value2, level)}`,
+  added: ({ key, value2, level }) => `${addIndentation(level)}  + ${key}: ${formatValue(value2, level)}`,
   removed: ({ key, value1, level }) => `${addIndentation(level)}  - ${key}: ${formatValue(value1, level)}`,
   edited: ({
     key, value1, value2, level,

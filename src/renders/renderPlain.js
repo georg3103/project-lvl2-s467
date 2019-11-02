@@ -5,7 +5,7 @@ const formatValue = (value) => {
 
 const mapping = {
   same: ({ parentKey, key }) => `Property '${parentKey}${key}' wasn't changed`,
-  add: ({ parentKey, key, formatedValue2 }) => `Property '${parentKey}${key}' was added with value: '${formatedValue2}'`,
+  added: ({ parentKey, key, formatedValue2 }) => `Property '${parentKey}${key}' was added with value: '${formatedValue2}'`,
   removed: ({ parentKey, key }) => `Property '${parentKey}${key}' was removed`,
   edited: ({
     parentKey, key, formatedValue1, formatedValue2,
